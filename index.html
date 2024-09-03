@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-7</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Website for analyse numbers</h1>
+    <input type="number" id="getNumbers">
+    <button onclick="getNumbers()">Add numbers</button>
+
+    <table>
+        <thead>
+            <tr>
+                <td>Data</td> <!-- getdatafrom formElement -->
+                <td>Action button</td><!-- <Button onclick="Del()">Del</Button> -->
+                <!-- use this to add del button and add del function to delete data -->
+            </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+    </table>
+
+    <!-- analyse button -->
+    <button onclick="analyseNumbers()">Analyse</button>
+    <details>
+        <summary>Result</summary>
+        <div id="sum">Sum :</div>
+        <div id="min">Min :</div>
+        <div id="max">Max :</div>
+        <div id="avg">Average :</div>
+    </details>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
