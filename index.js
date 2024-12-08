@@ -3,6 +3,9 @@ let allNumber = [];
 //this function made for take number from input and take into array
 function getNumbers() {
     //create parameter and take value from input syntax by method getElementById
+    if (allNumber.length === 0) {
+        alert('Please enter number to analyse');
+    }
     let n = document.getElementById('getNumbers').value
     n = parseInt(n);
     //push n to allNumber array
@@ -32,20 +35,11 @@ function analyseNumbers() {
         return;
     }
 
-    // allNumber.sort((a, b) => a - b);
-    // let minimum = allNumber[0];
-    // let maximum = allNumber[allNumber.length - 1];
-
+    // sort array from lower to higher then set minimum as index 0 and maximum as last index 
+    allNumber.sort((a, b) => a - b);
     let minimum = allNumber[0];
-    let maximum = minimum
-    for (let i = 0; i < allNumber.length; i++) {
-        if (minimum < allNumber[i]) {
-            minimum = allNumber[i]
-        }
-        if (maximum > allNumber[i]) {
-            maximum = allNumber[i]
-        }
-    }
+    let maximum = allNumber[allNumber.length - 1];
+    console.log(allNumber);
 
     //calculate the sum using a for loop
     let sum = 0
